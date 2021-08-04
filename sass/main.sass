@@ -1,0 +1,841 @@
+@import "_fonts.scss";
+@import "_base";
+
+.header
+  background: url(../img/cloud.png) no-repeat top center
+  background-size: cover
+  .line
+    margin-top: 50px
+
+.navigation
+  padding: 27px 0 50px
+  &__in
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .offer
+      flex-basis: 40%
+    .logo
+      flex-basis: 20%
+      justify-content: center
+    .nav
+      display: flex
+      flex-basis: 40%
+      justify-content: flex-end
+
+.offer
+  &__button
+    font-family: $font-ms
+    font-weight: 700
+    color: #c1af96
+    text-transform: uppercase
+    padding: 5px 14px 4px
+    box-shadow: 0px 1px 2px 1px #d2c3b3;
+    &:hover,
+    &:active
+      text-decoration: none
+      color: #c1af96
+  &__title
+    margin-top: 8px
+  &__desc
+    margin-top: 4px
+    font-size: 1.4rem
+    color: #57606f
+    max-width: 260px
+
+.logo
+  &__img
+    height: 116px
+    width: 116px
+
+.nav
+  display: flex
+  align-items: center
+
+.menu
+  display: flex
+  list-style: none
+  text-transform: uppercase
+  font-size: 1.4rem
+  font-family: $font-ms
+  font-weight: 900
+  padding: 0
+  margin: 0
+  li
+    margin-right: 35px
+    &:last-child
+      margin-right: 0
+    a
+      text-decoration: none
+      color: #57606f
+      position: relative
+      padding-bottom: 3px
+      &:before
+        content: ''
+        position: absolute;
+        display: block
+        background: #2670af
+        width: 100%
+        height: 2px
+        bottom: 0
+        left: 0
+        transition: all 0.3s ease
+        transform: scale(0)
+        transform-origin: center left
+      &:hover
+        color: #000
+      &:hover:before
+        transform: scale(1)
+  li.menu__active
+    a
+      color: #000
+      &:before
+        transform: scale(1)
+
+.slider-main
+  &__img
+    width: 100%
+  &__dots
+    ul
+      list-style: none
+      display: flex
+      justify-content: center
+      margin: 0
+      padding: 0
+      margin-top: 6px
+      li
+        margin-right: 8px
+        button
+          border: none
+          background: #000
+          color: transparent
+          height: 10px
+          width: 10px
+          border-radius: 100px
+          padding: 0
+          cursor: pointer
+      .slick-active button
+        background: #23aae2
+
+.advantages
+  margin-top: 50px
+  &__bottom
+    margin-top: 80px
+
+.advantage
+  font-family: $font-ms
+  font-weight: 900
+  display: flex
+  justify-content: center
+  line-height: 1
+  &__number
+    font-size: 4rem
+    display: inline
+    background-repeat: no-repeat
+    background-position: center bottom 1px
+    background-size: 100% 4px
+    background-image: linear-gradient(to right, #e95f2c, #3c4e94)
+    padding-bottom: 9px
+  &__title
+    font-size: 2rem
+    color: #6f7987
+    margin-top: 45px
+
+.adv-main
+  font-family: $font-ms
+  text-align: center
+  position: relative
+  line-height: 1
+  &__line
+    position: absolute
+    z-index: 1
+    left: 0
+    top: 50%
+    width: 100%
+    display: inline-block
+    border-top: 1px dashed #bcaf93
+    height: 18px
+  &__button
+    position: relative
+    z-index: 2
+    padding: 14px 90px
+    text-align: center
+    display: inline-block
+    border-radius: 100px
+    box-shadow: 0px 1px 1px 1px #d2c3b3, 0px 0px 30px 20px rgba(235,88,48,0.1)
+  &__number
+    font-size: 4.8rem
+    font-weight: 900
+  &__title
+    font-weight: 900
+    font-size: 2rem
+    color: #6f7987
+    margin-top: 1px
+
+.what
+  margin-top: 170px
+  &__in
+    background: url("../img/what_bg.jpg") no-repeat top left
+    background-size: cover
+    padding: 50px 35px 45px
+  &__block
+    width: 50%
+  .line
+    margin-top: 270px
+
+.why
+  margin-top: 100px
+  .block
+    padding-left: 35px
+  &__body
+    margin-top: 50px
+  .line
+    margin-top: 130px
+
+  .price-box-border
+    background-image: linear-gradient(to left, #f65742, #2975ba)
+    padding: 2px
+  .price-box
+    background: #fff
+    padding: 40px 35px 30px
+    position: relative
+    &__title
+      color: $color-blue
+      &-min
+        display: none
+    &__wrap
+      margin-top: 35px
+      margin-left: 25px
+      max-width: 360px
+    &__subtitle
+      display: flex
+    &__down
+      margin-left: 10px
+    &__list
+      list-style: none
+      padding: 0
+      margin: 0
+      margin-top: 25px
+      li
+        display: flex
+        justify-content: space-between
+        position: relative
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+        &:after
+          content: ""
+          position: absolute
+          z-index: 1
+          left: 0
+          top: 80%
+          width: 100%
+          display: inline-block
+          border-top: 1px dotted #bcaf93
+          height: 18px
+        span
+          position: relative
+          z-index: 2
+          background: #fff
+          padding: 0 3px
+          &.price-value
+            font-size: 2.4rem
+            font-family: $font-ms
+            font-weight: 500
+        &.final
+          &:after
+            display: none
+          span
+            &.price-name
+              font-size: 2.4rem
+              font-family: $font-ms
+              font-weight: 900
+              color: #58616e
+            &.price-value
+              font-family: $font-ms
+              font-size: 3rem
+              font-weight: 900
+              color: $color-blue
+    .boots
+      position: absolute
+      z-index: 3
+      right: -40px
+      top: -60px
+      width: 390px
+      &__img
+        width: 100%
+
+  .price-roz
+    &__wrap
+      margin-top: 35px
+    &__subtitle
+      display: flex
+    &__down
+      margin-left: 10px
+    &__list
+      list-style: none
+      padding: 0
+      margin: 0
+      margin-top: 25px
+      li
+        display: flex
+        justify-content: space-between
+        position: relative
+        margin-bottom: 3px
+        &:last-child
+          margin-bottom: 0
+        &:after
+          content: ""
+          position: absolute
+          z-index: 1
+          left: 0
+          top: 80%
+          width: 100%
+          display: inline-block
+          border-top: 1px dotted #bcaf93
+          height: 18px
+        span
+          position: relative
+          z-index: 2
+          background: #faf9eb
+          padding: 0 3px
+          &.price-name
+            font-size: 2rem
+          &.price-value
+            font-size: 2rem
+        &.sub-price 
+          span
+            &.price-name
+              padding-left: 50px
+        &.final
+          margin-top: 20px
+          &:after
+            display: none
+          span
+            font-family: $font-ms
+            font-weight: 900
+            color: #000
+            &.price-name
+              font-size: 2.4rem
+            &.price-value
+              font-size: 3rem
+
+.catalog
+  margin-top: 160px
+  &__body
+    margin-top: 40px
+  .line
+    margin-top: 180px
+
+
+.map
+  margin-top: 170px
+  .line
+    margin-top: 80px
+
+.products
+  display: flex
+  justify-content: space-between
+
+.card-one
+  background: #fff
+  padding: 9px
+  border: 1px solid #c3c3ba
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  &__img-box
+    width: 100%
+    height: 100%
+    position: relative
+    flex-basis: auto
+  &__img
+    min-height: 100%
+    min-width: 100%
+  &__body
+    padding-top: 5px
+    flex-basis: 70px
+    flex-shrink: 0
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+  &__name
+    font-size: 1.4rem
+    color: #58616e
+  &__buy
+    margin-top: 10px
+    display: flex
+    justify-content: space-between
+    font-family: $font-ms
+    font-weight: 900
+    align-items: center
+  &__price
+    font-size: 1.6rem
+  &__button
+    padding: 3px 10px
+    font-size: 1.4rem
+    color: #008ed4
+    background: #d5ebff
+    border: none
+    border-radius: 100px
+    font-family: $font-ms
+    font-weight: 900
+    transition: all 0.3s ease
+    cursor: pointer
+    &:hover
+      background: #008ed4
+      color: #fff
+
+.card-one__left
+  grid-area: card-one__left
+
+.card-one__right
+  grid-area: card-one__right
+
+.card-one__min-1
+  grid-area: card-one__min-1
+
+.card-one__min-2
+  grid-area: card-one__min-2
+
+.card-one__form
+  grid-area: card-one__form
+
+.card-one__min-4
+  grid-area: card-one__min-4
+
+.products
+  display: grid;  
+  grid-template-areas: "card-one__left card-one__min-1 card-one__min-2 card-one__right" "card-one__left card-one__form card-one__min-4 card-one__right"
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-rows: repeat(2, 250px)
+  grid-template-columns: 2fr 1fr 1fr 1fr
+
+.mini-form
+  background: #008ed4
+  color: #fff
+  padding: 20px 15px
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  &__title
+    text-transform: uppercase
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 2rem
+    line-height: 1.2em
+  &__form
+    margin-top: 20px
+    text-align: center
+  &__input
+    display: block
+    width: 100%
+    background: #f1f1f1
+    border: none
+    outline: none
+    padding: 10px 5px
+  &__button
+    display: inline-block
+    margin-top: 25px
+    border: 1px solid
+    color: #fff
+    background: transparent
+    border-radius: 100px
+    cursor: pointer
+    padding: 4px 20px 5px
+    transition: all 0.3s ease
+    &:hover 
+      background: #ffffff
+      color: #008ed4
+
+.how
+  margin-top: 100px
+  &__body
+    margin-top: 20px
+  &__img
+    width: 100%
+    background: url("../img/arrow.svg") repeat-x left center
+    background-size: 25%
+    &_v
+      display: none
+  &__route
+    position: relative
+    margin-top: 15px
+
+.route
+  padding: 45px 30px
+  background: #fff
+  border: 1px solid #ecece1
+  text-align: center
+  position: relative
+  &__number
+    display: inline-block
+    background-image: linear-gradient(to bottom, #fffbec, #fff4cc)
+    box-shadow: 0px 1px 1px 1px #d2c3b3
+    border-radius: 100px
+    height: 57px
+    width: 57px
+    text-align: center
+    line-height: 57px
+    color: #f1ad7c
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 4rem
+    box-shadow: 0px 1px 1px 1px #d2c3b3, 0px 0px 9px 4px rgba(122, 83, 63, 0.15)
+    position: relative
+    z-index: 2
+  &__rounds
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      z-index: 1
+      right: 0
+      top: 50%
+      width: 100%
+      display: inline-block
+      border-top: 1px dashed #bcaf93
+      height: 18px
+  &__arrow
+    position: absolute
+    z-index: 2
+    right: -30px
+    top: 50%
+    transform: translate(50%, -50%)
+    img
+      width: 27px
+      height: 27px
+  &__title
+    margin-top: 15px
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 3rem
+    color: #008ed4
+  &__desc
+    margin-top: 30px
+    color: #58616e
+
+.register
+  background-image: linear-gradient(to bottom, #0db5e6, #089fe0)
+  color: #fff
+  font-family: $font-ms
+  font-weight: 900
+  text-align: center
+  padding: 22px 0
+  margin-top: 30px
+  box-shadow: 0px 1px 5px 0px rgba(63, 81, 122, 0.8)
+  a
+    font-size: 3rem
+    color: #fff
+    &:hover,&:active
+      color: #fff
+
+.comments
+  margin-top: 140px
+  margin-bottom: 220px
+  &__body
+    margin-top: 50px
+
+.comment
+  &__img-product
+    width: 100%
+  &__title
+    margin-top: 15px
+    font-size: 1.7rem
+  &__rating
+    margin-top: 10px
+    display: flex
+    align-items: center
+  &__stars
+    list-style: none
+    display: flex
+    padding: 0
+    margin: 0
+    margin-right: 10px
+    li
+      height: 14px
+      width: 14px
+      margin-right: 3px
+      background: url("../img/star_off.png") no-repeat center center
+      cursor: pointer
+      &:hover,
+      &.active
+        background: url("../img/star_on.png") no-repeat center center
+  &__click
+    font-size: 1.2rem
+    color: #0897dc
+  &__author
+    margin-top: 25px
+    display: flex
+    align-items: center
+    &-img
+      width: 25px
+      height: 25px
+      border-radius: 100px
+      margin-right: 7px
+    &-name
+      font-family: $font-ms
+      font-weight: 900
+      color: #9f8567
+  &__text
+    color: #58616e
+    font-size: 1.4rem
+    margin-top: 10px
+    background: #fff
+    padding: 30px 10px
+    border: 1px solid #e5e5dc
+    line-height: 1.4em
+    position: relative
+    &::after,
+    &::before
+      content: ''
+      position: absolute
+      background: #fff
+      left: 30px; top: -7px
+      width: 15px; height: 15px
+      box-shadow: 0 0 1px 1px #e5e5dc
+      z-index: -1
+      transform: rotate(45deg)
+    &::before
+      z-index: 1
+      box-shadow: none
+  &__all
+    font-size: 1.2rem
+    color: #0897dc
+    text-decoration: underline
+    padding-bottom: 3px
+
+.subscribe
+  text-align: center
+  height: 96%
+  padding: 30px 16px
+  background: url(../img/border-l.png) repeat-y left top/5px, url(../img/border-r.png) repeat-y right top/5px, url(../img/border-t.png) repeat-x left top/65px, #fff url(../img/border-b.png) repeat-x left bottom / 65px
+  &__img
+    width: 54px
+  &__title
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 2.6rem
+    color: #008ed4
+    margin-top: 20px
+  &__form
+    margin-top: 30px
+  &__input
+    background: #f6f6f6
+    display: block
+    width: 100%
+    border: none
+    padding: 12px 15px 14px
+    font-size: 1.4rem
+  &__button
+    border: none
+    outline: none
+    color: #978774
+    font-family: $font-ms
+    font-weight: 700
+    font-size: 1.6rem
+    padding: 14px 34px
+    border-radius: 100px
+    box-shadow: 0px 1px 1px 1px #d2c3b3
+    margin-top: 30px
+    cursor: pointer
+  &__policy
+    margin-top: 60px
+    display: block
+    color: #919cad
+    text-decoration: underline
+
+.footer
+  background: #e5f1ff
+  padding: 40px 0 35px
+
+.f-offer
+  display: flex
+  &__img-box
+    margin-right: 20px
+  &__img
+    width: 56px
+    height: 56px
+  &__desc
+    margin-top: 10px
+  &__copy
+    margin-top: 25px
+
+.f-menu
+  list-style: none
+  padding: 0
+  margin: 0
+  display: table
+  margin: 0 auto
+  li
+    margin-bottom: 7px
+    &:last-child
+      margin-bottom: 0
+    a
+      font-size: 1.4rem
+      color: #4c6f97
+      text-decoration: underline
+      &:hover,
+      &:active
+        color: darken(#4c6f97, 20%)
+
+
+  /* Стили Карты */
+
+#svg_map
+  position: absolute
+  left: 0
+  width: 100%
+
+path
+  stroke: white
+  stroke-width: 1px
+  cursor: pointer
+
+.tooltip
+  position: absolute
+  top: 0
+  text-align: center
+  padding: 5px 20px
+  font-size: 16px
+  background: #fff
+  border-radius: 100px
+  pointer-events: none
+  box-shadow: 0 0 4px #333
+
+
+
+.partners
+  padding-bottom: 100px
+  &__row
+    display: flex
+    justify-content: center
+    .partner
+      margin-right: 16px
+      &:last-child
+        margin-right: 0
+    &_2,
+    &_3
+      margin-top: -85px
+    &_4
+      margin-top: -4px
+      display: none
+    
+.partner
+  position: relative
+  display: block
+  height: 396px
+  width: 340px
+  overflow: hidden
+  &:hover &__in
+    background: darken(#fff, 3%)
+  &_c-blue &__out
+    background: #1d71b9
+  &_c-blue &__title
+    color: #1d71b9
+  &_c-green &__out
+    background: #01953f
+  &_c-green &__title
+    color: #01953f
+  &_c-pink &__out
+    background: #e6007e
+  &_c-pink &__title
+    color: #e6007e
+  &_c-sky &__out
+    background: #eaf4fe
+  &_c-sky &__title
+    color: #eaf4fe
+  &_c-sky-gradient &__out
+    background: linear-gradient(135deg, #ffc6be 0%,#a0c6ea 100%)
+  &_c-sky-gradient &__title
+    color: #eaf4fe
+  &_c-red &__out
+    background: #ff4719
+  &_c-red &__title
+    color: #ff4719
+  &_c-yellow &__out
+    background: #dfda02
+  &_c-yellow &__title
+    color: #dfda02
+  &_c-purple &__out
+    background: #941983
+  &_c-purple &__title
+    color: #941983
+  &__out
+    position: absolute
+    z-index: 9
+    display: block
+    width: 100%
+    height: 100%
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+    transform: scale(0.986)
+  &__in
+    position: absolute
+    z-index: 10
+    top: 0
+    left: 0
+    display: block
+    height: 100%
+    width: 100%
+    background: #fff
+    transition: all 0.3s ease
+  &_t-l &__in
+    clip-path: polygon(50% 5%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 4% 28%)
+  &_t-r &__in
+    clip-path: polygon(50% 5%, 96% 28%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+  &_c-l &__in
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 5% 72%, 5% 28%)
+  &_c-r &__in
+    clip-path: polygon(50% 0%, 95% 28%, 95% 72%, 50% 100%, 0% 75%, 0% 25%)
+  &_c-c &__in
+    clip-path: polygon(50% 4%, 96% 27%, 96% 73%, 50% 96%, 4% 73%, 4% 27%)
+  &_b-l &__in
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 96%, 4% 72%, 0% 25%)
+  &_b-r &__in
+    clip-path: polygon(50% 0%, 100% 25%, 96% 72%, 50% 96%, 0% 75%, 0% 25%)
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 11
+    color: #000
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    text-align: center
+    padding: 0 35px
+  &__title
+    margin-top: 140px
+    font-family: $font-ms
+    font-size: 24px
+    font-weight: 500
+  &__desc
+    margin-top: 35px
+    font-size: 18px
+    color: #1b1c1f
+    &-big
+      font-size: 24px
+  &__img-box
+    margin-top: 35px
+    margin-bottom: 40px
+    display: inline-block
+    width: 48px
+    height: 48px
+    overflow: hidden
+  &__img
+    width: 100%
+  &_center &__desc
+    margin-top: 0
+    line-height: 1.7em
+    font-weight: 300
+    &-big
+      font-weight: 500
+  &_center &__content
+    font-family: $font-ms
+    font-size: 18px
+    justify-content: center

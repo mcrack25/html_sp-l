@@ -1,0 +1,533 @@
+/* Map styles */
+
+@media (max-width: 992px)
+    #svg_map
+        display: none
+@media (min-width: 1200px)
+    #svg_map
+        width: 650px
+@media (min-width: 1400px)
+    #svg_map
+        width: 800px
+@media (min-width: 1600px)
+    #svg_map
+        width: 900px
+@media (min-width: 1900px)
+    #svg_map
+        width: 980px
+/* Map styles */
+
+@media (max-height: 750px)
+    .page-nav
+        &__list
+            li
+                margin-bottom: 25px
+                &:after
+                    height: 22px
+
+
+@media (max-width: 1299px)
+    .menu
+        li
+            margin-right: 25px
+
+    .why
+        .price-box
+            .boots
+                right: -100px
+
+@media (max-width: 1199px)
+    .menu
+        li
+            font-size: 1.2rem
+            margin-right: 15px
+
+    .menu-btn
+        height: 12px
+        margin-left: 15px
+
+    .advantage
+        &__number
+            font-size: 3rem
+
+    .what
+        margin-top: 130px
+        &__block
+            width: 80%
+
+    .why
+        .price-box
+            .boots
+                width: 280px
+                bottom: 0
+                right: -100px
+                bottom: 0
+                top: auto
+
+    .products
+        display: grid;  
+        grid-template-areas: "card-one__left card-one__left card-one__left" "card-one__min-1 card-one__min-2 card-one__right" "card-one__form card-one__min-4 card-one__right"
+        grid-column-gap: 15px
+        grid-row-gap: 15px
+        grid-template-rows: 2fr 1fr 1fr
+        grid-template-columns: repeat(3, 32%)
+
+
+    /* Партнёры */
+    .partners
+        &__row
+            &_2,
+            &_3
+                margin-top: -65px
+
+    .partner
+        width: 270px
+        height: 312px
+        &__content
+            padding: 0 15px
+        &__title
+            margin-top: 100px
+            font-size: 20px
+        &__desc
+            margin-top: 25px
+            font-size: 14px
+            &-big
+                font-size: 18px
+        &__img-box
+            margin-top: 20px
+            margin-bottom: 25px
+            height: 40px
+            width: 40px
+
+@media (max-width: 992px)
+
+    .navigation
+        &__in
+            flex-direction: column
+
+        .logo-box
+            order: 1
+            .logo
+                &__img
+                    height: auto
+                    width: 100%
+        
+        .offer
+            order: 2
+            margin-top: 20px
+            display: block
+            text-align: center
+
+        .nav
+            order: 3
+            margin-top: 20px
+            width: 100%
+            display: flex
+            justify-content: space-between
+    
+    .advantages__bottom
+        margin-top: 40px
+
+    .advantage
+        margin-bottom: 40px
+        &__title
+            margin-top: 15px
+            
+    .what
+        margin-top: 100px
+        &__block
+            width: 100%
+        .line
+            margin-top: 100px
+
+    .why
+        margin-top: 50px
+        .price-box
+            .boots
+                width: 350px
+
+        .price-roz
+            margin-top: 40px
+        
+        .line
+            margin-top: 50px
+
+    .catalog
+        margin-top: 50px
+        .line
+            margin-top: 50px
+
+    .route
+        margin-bottom: 30px
+
+    .map
+        margin-top: 50px
+
+    .comments
+        margin-bottom: 100px
+
+    .comment
+        margin-bottom: 30px
+
+    .f-menu
+        margin-top: 30px
+
+    /* Партнёры */
+    .partners
+        margin-top: 50px
+        &__row
+            &_1,
+            &_2,
+            &_3
+                margin-top: 0px
+                flex-direction: column
+                align-items: center
+            &_4
+                display: flex
+            .partner
+                margin-right: 0px
+                &_1
+                    order: 2
+                &_2
+                    order: 1
+                &_3
+                    order: 2
+                &_4
+                    display: none
+                &_5
+                    order: 1
+                &_6
+                    order: 1
+                &_7
+                    order: 2
+                
+
+
+@media (max-width: 768px)
+
+    .navigation
+        &__in
+            flex-direction: row
+            justify-content: space-between
+        .logo-box
+            flex-basis: 20%
+            .logo
+                width: 100%
+        .offer
+            text-align: left
+            margin: 0
+            flex-basis: 55%
+            display: flex
+            flex-direction: column
+        .nav
+            margin: 0
+            justify-content: end
+            flex-basis: 5%
+
+    .sidebar
+        width: 75%
+        padding: 25px 40px
+
+    h2
+        font-size: 3rem
+
+    h3
+        font-size: 2.5rem
+
+    .menu
+        display: none
+    .nav
+        justify-content: end
+        margin-top: 0
+
+    .offer
+        display: flex
+        flex-direction: column
+        text-align: left
+        margin-top: 0
+        &__button
+            font-size: 1.2rem
+            order: 2
+            background: transparent !important
+            padding: 0 !important
+            box-shadow: none !important
+            color: #000 !important
+            margin-top: 2px
+            text-transform: none
+        &__title
+            font-weight: 500
+            font-size: 1.8rem
+            order: 1
+        &__desc
+            order: 3
+
+    .why
+        .price-box
+            .boots
+                width: 200px
+                right: -130px
+
+    .products
+        display: grid;  
+        grid-template-areas: "card-one__left card-one__left" "card-one__min-1 card-one__min-2" "card-one__form card-one__form"
+        grid-column-gap: 15px
+        grid-row-gap: 15px
+        grid-template-rows: 3fr 1fr 1fr
+        grid-template-columns: repeat(2, 48%)
+
+        .card-one__min-3,
+        .card-one__min-4,
+        .card-one__right
+            display: none
+
+    .advantage
+        text-align: center
+        &__number
+            font-size: 2.5rem
+            font-weight: 500
+        &__title
+            font-size: 1.2rem
+
+    .block
+        &__head
+            &_horizontal
+                display: flex
+                flex-direction: column
+                .block
+                    &__title
+                        width: 100%
+                    &__desc
+                        margin-top: 30px
+                        width: 100%
+        &__list
+            li
+                background-size: 30px
+                padding-left: 45px
+
+    .adv-main
+        &__button
+            padding: 14px 40px
+        &__number
+            font-size: 3.7rem
+        &__title
+            font-size: 1.5rem
+        &__line
+            display: none
+
+    .socials
+        display: none
+
+    .page-nav
+        display: flex
+        justify-content: space-between
+        background: #fff
+        position: fixed
+        left: 0px
+        bottom: 0px
+        width: 100%
+        padding: 15px
+        border-top: 1px solid #c2e7ff
+        &__title
+            display: none
+        &__list
+            display: flex
+            flex-direction: inherit
+            margin: 0
+            padding: 0
+            li
+                margin-bottom: 0
+                margin-right: 10px
+                &:after
+                    display: none
+        &__socials
+            display: block
+            ul
+                list-style: none
+                padding: 0
+                margin: 0
+                display: flex
+                font-size: 18px
+                li
+                    margin-right: 10px
+                    a
+                        color: #008ed4
+
+    .footer
+        padding-bottom: 100px
+
+@media (max-width: 552px)
+
+    .line
+        display: none
+
+    .navigation
+        padding: 10px 0
+
+    .slider
+        &__col
+            padding: 0
+
+    .slider-main
+        &__dots
+            ul
+                li
+                    button
+                        width: 7px
+                        height: 7px
+
+    .advantages
+        margin-top: 25px
+        &__bottom
+            margin-top: 5px
+    .advantage
+        margin-bottom: 40px
+        &__title
+            font-size: 1.3rem
+
+    .what
+        margin-top: 70px
+        &__in
+            padding: 35px 20px 25px
+            &-2
+                background: url("../img/what_bg.jpg") no-repeat top right
+                background-size: cover
+                height: 200px
+                width: 100%
+        &__col
+            padding: 0
+
+    .block
+        &__desc
+            margin-top: 15px
+            font-size: 1.3rem
+        &__body
+            margin-top: 20px
+        &__list
+            li
+                margin-bottom: 0px
+        &__minidesc
+            margin-top: 40px
+
+    .why
+        margin-top: 30px
+        &__body
+            margin-top: 35px
+
+        .price-box
+            padding: 5px 10px
+            &__title-full
+                display: none
+            &__title-min
+                display: inline
+            &__wrap
+                margin: 0
+                margin-top: 5px
+            &__list
+                margin-top: 5px
+                padding-left: 20px
+                width: 50%
+                li
+                    margin-bottom: 5px
+                    &:after
+                        display: none
+                    .price-name
+                        font-size: 1.4rem
+                    .price-value
+                        font-size: 1.2rem !important
+                    &.final
+                        .price-name
+                            font-size: 1.4rem !important
+                        .price-value
+                            font-size: 1.4rem !important
+            .boots
+                width: 160px
+                right: 25px
+                bottom: -15px
+        .price-roz
+            margin-top: 18px
+            &__wrap
+                margin-top: 20px
+            &__list
+                margin-top: 15px
+                .price-name
+                    font-size: 1.4rem !important
+                .price-value
+                    font-size: 1.4rem !important
+                &.final
+                    .price-name
+                        font-size: 1.4rem !important
+                    .price-value
+                        font-size: 1.4rem !important
+
+    .how
+        margin-top: 40px
+        &__img
+            &_h
+                display: none
+            &_v
+                display: block
+        &__route
+            display: none
+
+    .register
+        a
+            font-size: 2rem
+
+    .products
+        display: grid;  
+        grid-template-areas: "card-one__left card-one__left" "card-one__min-1 card-one__min-2" "card-one__form card-one__form"
+        grid-column-gap: 15px
+        grid-row-gap: 15px
+        grid-template-rows: 2fr 1fr 1fr
+        grid-template-columns: repeat(2, 48%)
+
+        .card-one__min-3,
+        .card-one__min-4,
+        .card-one__right
+            display: none
+
+        .card-one
+            &__body
+                flex-basis: 50px
+            &__name
+                font-size: 1.2rem
+            &__price,
+            &__button
+                font-size: 1.2rem
+    
+    .comments
+        margin-top: 40px
+        margin-bottom: 50px
+
+@media (max-width: 390px)
+    .why
+        .price-box
+            &__list
+                width: 60%
+            .boots
+                width: 130px
+                right: -10px
+                bottom: -15px
+            &__down
+                display: none
+        .price-roz
+            &__down
+                display: none
+
+    .products
+        display: grid;  
+        grid-template-areas: "card-one__left card-one__left" "card-one__min-1 card-one__min-2" "card-one__form card-one__form"
+        grid-column-gap: 15px
+        grid-row-gap: 15px
+        grid-template-rows: 280px 147px 300px
+        grid-template-columns: repeat(2, 48%)
+
+        .card-one__min-3,
+        .card-one__min-4,
+        .card-one__right
+            display: none
+
+        .card-one
+            padding: 5px
+            &__name
+                font-size: 0.8rem

@@ -1,0 +1,358 @@
+$font-pt: 'PT Sans', sans-serif;
+$font-ms: 'Museo Sans Cyrl';
+
+$color-blue: #008ed4;
+
+@media (min-width: 1300px)
+  .container
+    max-width: 1300px
+
+html
+  font-size: 10px
+
+body
+  background: #faf9eb
+  font-family: $font-pt
+  font-weight: 400
+  font-size: 1.6rem
+  line-height: 1.2
+  width: 100%
+  overflow-x:hidden
+
+h1,h2,h3,h4,h5,h6
+  margin: 0
+  padding: 0
+  font-family: $font-ms
+  font-weight: 900
+
+h1
+  font-size: 3.2rem
+
+h2
+  font-size: 4.8rem
+
+h3
+  font-size: 3rem
+
+h4
+  font-size: 1.8rem
+
+p
+  padding: 0
+  margin: 0
+  color: #58616e
+  line-height: 1.3
+
+a
+  outline: none
+  &:hover,
+  &:active,
+  &:focus
+    outline: none
+
+nav
+  margin: 0
+  padding: 0
+
+$gradient-orange_1: #fff9e7
+$gradient-orange_2: #ffecbc
+
+.gradient
+  &_orange
+    background: linear-gradient(to bottom, $gradient-orange_1, $gradient-orange_2)
+    &-darken
+      background: linear-gradient(to bottom, darken($gradient-orange_1, 5%), darken($gradient-orange_2, 5%))
+
+.button
+  cursor: pointer
+  text-decoration: none
+  border: none
+  outline: none
+  &:hover,
+  &:active,
+  &:focus
+    border: none
+    outline: none
+  &_orange
+    @extend .gradient_orange
+    color: #978774
+    font-family: $font-ms
+    font-weight: 700
+    border-radius: 100px
+    box-shadow: 0px 1px 1px 1px #d2c3b3
+    transition: all 0.3s ease
+    padding: 5px 10px
+    &:hover,
+    &:active
+      @extend .gradient_orange-darken
+      text-decoration: none
+      color: #978774
+
+
+.line
+  &__left,
+  &__right
+    float: left
+    background: #2670af
+    width: 50%
+    height: 4px
+  &__right
+    float: right
+  &:after
+    content: ''
+    display: table
+    width: 100%
+    clear: both
+
+.block
+  &__head
+    &_horizontal
+      display: flex
+      align-items: center
+      .block
+        &__title
+          width: 50%
+        &__desc
+          font-family: $font-ms
+          font-weight: 900
+          width: 50%
+          padding: 0
+          margin: 0
+  &__minidesc
+    text-align: center
+    margin-top: 80px
+    color: #7a7a7a
+    &:after
+      content: ""
+      display: block
+      width: 50%
+      height: 1px
+      background: #7a7a7a
+      margin: 0 auto
+      margin-top: 20px
+  &__desc
+    margin-top: 30px
+  &__body
+    margin-top: 40px
+  &__list
+    list-style: none
+    li
+      padding: 10px 0
+      padding-left: 60px
+      min-height: 60px
+      background: url("../img/checked.png") no-repeat left center
+      background-size: 42px
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+
+.menu-btn
+  display: block
+  padding: 20px
+  width: 20px
+  height: 19px
+  position: relative
+  margin-left: 30px
+  span,
+  span::before,
+  span::after
+    position: absolute
+    top: 50%
+    margin-top: -1px
+    right: 50%
+    margin-right: -10px
+    width: 20px
+    height: 2px
+    background-color: #222
+
+  span::before,
+  span::after
+    content: ''
+    display: block
+    transition: all 0.2s ease
+
+  span::before
+    transform: translateY(-5px)
+
+  span::after
+    transform: translateY(5px)
+
+  &_active span:before
+    transform: rotate(-35deg)
+    width: 10px
+    transform-origin: right bottom
+
+  &_active span:after
+    transform: rotate(35deg)
+    width: 10px
+    transform-origin: right top
+
+
+.map-form
+  margin-top: 35px
+  &__select
+    border-radius: 10px
+    height: 55px
+    font-size: 2.4rem
+    font-family: $font-ms
+    font-weight: 900
+    color: 0
+    padding: 10px 20px
+    &:active,
+    &:focus
+      outline: none
+
+.custom-select
+  background-position: right 20px center
+
+.cities
+  list-style: none
+  width: 100%
+  padding: 0 20px
+  margin-top: 20px
+  li
+    width: 49%
+    display: inline-block
+    margin-bottom: 15px
+    a
+      color: #008ed4
+
+.overlay
+  display: block
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  height: 100%
+  width: 0
+  background: #000000
+  opacity: 0.3
+  &_active
+    width: 100%
+
+.sidebar
+  background: #e9f4fe
+  box-shadow: -1px 0px 21px 0px rgba(115, 129, 149, 0.74)
+  padding: 35px 100px
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 20
+  width: 800px
+  height: 100vh
+  background: #fff
+  transition: all 0.5s ease
+  transform: translateX(120%)
+  &_active
+    transform: translateX(0)
+  &__close
+    float: right
+    cursor: pointer
+    i
+      font-size: 16px
+  &__list
+    margin-top: 40px
+    list-style: none
+    padding: 0
+    & li
+      border-bottom: 1px solid #ccd8e4
+      &:last-child
+        border: none
+      a
+        display: block
+        padding: 10px
+        color: #57606f
+        font-family: $font-ms
+        font-weight: 700
+        text-transform: uppercase
+        text-decoration: none
+        &:hover
+          background: #c9e4fc
+    ul
+      list-style: none
+      padding: 0
+      display: flex
+      flex-wrap: wrap
+      li
+        width: 49%
+        border: none
+        a
+          font-weight: 500
+          padding: 10px 20px
+          text-transform: none
+
+.socials
+  position: fixed
+  left: 30px
+  bottom: 30px
+  display: block
+  z-index: 5
+  &__list
+    list-style: none
+    padding: 0
+    margin: 0
+    text-align: center
+    li
+      font-size: 24px
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+
+.page-nav
+    right: 10px
+    bottom: 20px
+    position: fixed
+    z-index: 5
+    &__socials
+      display: none
+    &__list
+      padding: 0
+      margin: 0
+      list-style: none
+      display: flex
+      flex-direction: column
+      align-items: center
+      li
+        margin-bottom: 40px
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          width: 1px
+          top: 100%
+          margin-top: 2px
+          height: 36px
+          background-color: #c69c6d
+          left: 50%
+        &:last-child
+          margin-bottom: 0
+          &:after
+            display: none
+        a
+          width: 35px
+          height: 35px
+          font-size: 14px
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          transition: 0.4s
+          border-radius: 50%
+          border: solid 1px #c69c6d
+          font-weight: 700
+          color: #c69c6d
+          text-decoration: none
+          &.active
+            background-color: #c69c6d
+            color: #fff
+    &__title
+      width: 35px
+      height: 35px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      font-size: 18px
+      transform-origin: left bottom
+      transform: translate(90%, 0%) rotate(-90deg)
+      color: #c69c6d
+      white-space: nowrap
